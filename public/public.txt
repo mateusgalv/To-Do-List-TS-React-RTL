@@ -1,0 +1,5 @@
+Esse diretório conterá os arquivos estáticos e públicos que estarão disponíveis
+para toda a aplicação, no endereço /arquivo
+
+São adicionados a essa pasta arquivos como:
+favicons, robots.txt e manifest.json
