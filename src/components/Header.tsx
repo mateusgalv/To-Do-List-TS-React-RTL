@@ -1,22 +1,44 @@
+import type React from "react";
+import { useState } from "react";
 import "../styles/Header.css";
 
-function Header() {
-    let isLoggedIn = false;
+interface HeaderProps {
+    isLoggedIn: boolean;
+    setIsLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-    const login = () => {
-        console.log("Login")
-    };
+function Header({ isLoggedIn, setIsLoggedIn }: HeaderProps) {
+    const [loginDropdown, setLoginDropdown] = useState(false);
+
+    const handleLoginBtn = () => {
+        setLoginDropdown(!loginDropdown);
+    }
 
     return (
         <div className="header-container">
-            <h1>To do list</h1>
+            <div className="header-title">
+                <h1>To do list</h1>
+            </div>
+            <div>
             {
                 isLoggedIn ? (
-                    <div>Is Logged In</div>
+                    <div>
+                        User
+                    </div>
                 ) : (
-                    <div onClick={login}>Login</div>
+                    <div onClick={handleLoginBtn}>
+                        Login
+                    </div>
                 )
             }
+            {
+                loginDropdown && (
+                    <div className="login-dropdown-container">
+                        Dropdown
+                    </div>
+                )
+            }
+            </div>
         </div>
     );
 }

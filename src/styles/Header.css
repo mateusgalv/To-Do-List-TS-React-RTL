@@ -7,3 +7,13 @@
     height: 50px;
     background-color: pink;
 }
+
+/* border: 1px solid black; */
+.login-dropdown-container {
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+
+    position: absolute;
+    top: 50px;
+}
