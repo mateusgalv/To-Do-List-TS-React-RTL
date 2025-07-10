@@ -1,0 +1,29 @@
+.todo-list-container {
+    display: flex;
+    border-radius: 5px;
+    min-width: 380px;
+    width: 95vw;
+
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.todo-list {
+    background-color: #BCCCDC;
+
+}
+
+.task-input {
+    border: none;
+    padding: 0;
+    margin: 5px;
+    background: none;
+    outline: none;
+    box-shadow: none;
+    font: inherit;
+    color: inherit;
+
+    border-bottom: 1px solid black;
+    
+}

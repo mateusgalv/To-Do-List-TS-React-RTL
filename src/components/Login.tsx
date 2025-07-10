@@ -4,7 +4,7 @@ import "../styles/Login.css";
 
 interface LoginProps {
     setIsLoggedIn: React.Dispatch<React.SetStateAction<boolean>>,
-    setLoginDropdown: React.Dispatch<React.SetStateAction<boolean>>
+    setLoginPopup: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 type User = {
@@ -12,7 +12,7 @@ type User = {
     password: string,
 }
 
-function Login({ setIsLoggedIn, setLoginDropdown } : LoginProps) {
+function Login({ setIsLoggedIn, setLoginPopup } : LoginProps) {
     const [formData, setFormData] = useState({
         user: "",
         psw: "",
@@ -68,12 +68,12 @@ function Login({ setIsLoggedIn, setLoginDropdown } : LoginProps) {
     };
 
     const handleClose = () => {
-        setLoginDropdown(false);
+        setLoginPopup(false);
     };
 
     return (
-        <div className="dropdown-form-container">
-            <div className="dropdown">
+        <div className="popup-form-container">
+            <div className="popup">
                 <div className="close-btn-container">
                     <button className="close-btn" onClick={handleClose}>X</button>
                 </div>

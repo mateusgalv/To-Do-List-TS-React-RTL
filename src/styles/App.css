@@ -2,3 +2,13 @@
     margin: 0;
     padding: 0;
 }
+
+.app {
+    height: 100vh;
+    background-color: #F8FAFC;
+}
+
+.opaque {
+    /* background-color: grey; */
+    /* opacity: 0.5; */
+}

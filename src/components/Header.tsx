@@ -10,10 +10,10 @@ interface HeaderProps {
 }
 
 function Header({ isLoggedIn, setIsLoggedIn }: HeaderProps) {
-    const [loginDropdown, setLoginDropdown] = useState(false);
+    const [loginPopup, setLoginPopup] = useState(false);
 
     const handleLoginBtn = () => {
-        if(!loginDropdown) setLoginDropdown(!loginDropdown);
+        if(!loginPopup) setLoginPopup(!loginPopup);
     }
 
     return (
@@ -35,8 +35,8 @@ function Header({ isLoggedIn, setIsLoggedIn }: HeaderProps) {
                 )
             }
             {
-                loginDropdown && (
-                    <Login setIsLoggedIn={setIsLoggedIn} setLoginDropdown={setLoginDropdown}/>
+                loginPopup && (
+                    <Login setIsLoggedIn={setIsLoggedIn} setLoginPopup={setLoginPopup}/>
                 )
             }
             </div>
